@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Uncloseable Tab</title>
+    <title>The Unclosable Tab</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body onload="onload()">
+    <h1 id="title"></h1>
+    <p id="text"></p>
     <form onsubmit="start()">
       <input type="submit" id="startButton" value="click me">
+      <label for="startButton" id="sbLabel"></label>
     </form>
   </body>
   <script>
+    function onload(){
+      var cookie = document.cookie;
+      if (cookie == "") {
+        document.getElementById("title").innerHTML = "The Unclosable Tab";
+        document.getElementById("text").innerHTML = "Welcome to The Unclosable Tab! Don't worry, it's closable for now, but if you're up for the challenge, click the Start button below!";
+      } else if (cookie == "unimportant=0") {
+        document.getElementById("title").innerHTML = "The Unclosable Tab";
+        document.getElementById("text").innerHTML = "Ah, I see you're up to the challenge! Well. Go ahead. Try to close me.";
+      }
     function start(){
-      alert("e");
+      document.getElementById("sbLabel").innerHTML = "The challenge should open in a new tab...";
+      document.cookie = "unimportant=0";
+      window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
     }
   </script>
 </html>
