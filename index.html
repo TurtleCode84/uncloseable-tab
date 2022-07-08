@@ -8,7 +8,7 @@
     <h1 id="title"></h1>
     <p id="text"></p>
     <form onsubmit="start()">
-      <input type="submit" id="startButton" value="click me">
+      <input type="submit" id="startButton" value="click me" style="visibility=hidden">
       <label for="startButton" id="sbLabel"></label>
     </form>
   </body>
@@ -18,6 +18,7 @@
       if (cookie == "") {
         document.getElementById("title").innerHTML = "The Unclosable Tab";
         document.getElementById("text").innerHTML = "Welcome to The Unclosable Tab! Don't worry, it's closable for now, but if you're up for the challenge, click the Start button below!";
+        document.getElementById("startButton").style.visibility = "visible";
       } else if (cookie == "unimportant=0") {
         document.getElementById("title").innerHTML = "The Unclosable Tab";
         document.getElementById("text").innerHTML = "Ah, I see you're up to the challenge! Well. Go ahead. Try to close me.";
