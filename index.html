@@ -31,10 +31,10 @@
       document.getElementById("sbLabel").innerHTML = "Loading...";
       document.cookie = "unimportant=0";
       var checkTab = window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
-      checkTab.close();
-      if (!newWin || newWin.closed || typeof newWin.closed == "undefined") {
+      if (checkTab) {
         document.cookie = "unimportant=1";
       }
+      checkTab.close();
       window.location.reload();
     }
   </script>
