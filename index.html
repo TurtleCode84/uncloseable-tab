@@ -19,7 +19,10 @@
         document.getElementById("title").innerHTML = "The Unclosable Tab";
         document.getElementById("text").innerHTML = "Welcome to The Unclosable Tab! Don't worry, it's closable for now, but if you're up for the challenge, click the Start button below!";
         document.getElementById("startButton").style.visibility = "visible";
-      } else if (cookie == "unimportant=0") {
+      } else if (cookie == "unimportant=0" {
+        document.getElementById("text").innerHTML = "Checking to make sure you're not hacking the challenge...";
+        document.cookie = "unimportant=1";
+      } else if (cookie == "unimportant=1") {
         document.getElementById("title").innerHTML = "The Unclosable Tab";
         document.getElementById("text").innerHTML = "Ah, I see you're up to the challenge! Well. Go ahead. Try to close me.";
       }
@@ -27,8 +30,8 @@
     function start(){
       document.getElementById("sbLabel").innerHTML = "The challenge should open in a new tab...";
       document.cookie = "unimportant=0";
-      window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
-      window.close();
+      var checkTab = window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
+      checkTab.close();
     }
   </script>
 </html>
