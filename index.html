@@ -15,7 +15,7 @@
   <script>
     function onload(){
       var cookie = document.cookie;
-      if (cookie == "") {
+      if (cookie == "" || cookie == "unimportant=") {
         document.getElementById("title").innerHTML = "The Unclosable Tab";
         document.getElementById("text").innerHTML = "Welcome to The Unclosable Tab! Don't worry, it's closable for now, but if you're up for the challenge, click the Start button below!";
         document.getElementById("startButton").style.visibility = "visible";
