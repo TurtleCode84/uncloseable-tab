@@ -22,6 +22,7 @@
       } else if (cookie == "unimportant=0") {
         document.getElementById("text").innerHTML = "Checking to make sure you're not hacking the challenge...";
         document.cookie = "unimportant=1";
+        window.location.reload();
       } else if (cookie == "unimportant=1") {
         document.getElementById("title").innerHTML = "The Unclosable Tab";
         document.getElementById("text").innerHTML = "Ah, I see you're up to the challenge! Well. Go ahead. Try to close me.";
@@ -32,7 +33,6 @@
       document.cookie = "unimportant=0";
       var checkTab = window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
       checkTab.close();
-      window.location.reload();
     }
   </script>
 </html>
