@@ -21,7 +21,6 @@
         document.getElementById("startButton").style.visibility = "visible";
       } else if (cookie == "unimportant=0") {
         document.getElementById("text").innerHTML = "Loading...";
-        document.cookie = "unimportant=1";
         window.location.reload();
       } else if (cookie == "unimportant=1") {
         document.getElementById("title").innerHTML = "The Unclosable Tab";
@@ -33,6 +32,10 @@
       document.cookie = "unimportant=0";
       var checkTab = window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
       checkTab.close();
+      if (!newWin || newWin.closed || typeof newWin.closed == "undefined") {
+        document.cookie = "unimportant=1";
+      }
+      window.location.reload();
     }
   </script>
 </html>
