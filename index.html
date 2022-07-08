@@ -31,7 +31,7 @@
       document.getElementById("sbLabel").innerHTML = "Loading...";
       document.cookie = "unimportant=0";
       var checkTab = window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
-      if (checkTab) {
+      if (!checkTab.closed) {
         document.cookie = "unimportant=1";
       }
       checkTab.close();
