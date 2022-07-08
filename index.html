@@ -20,7 +20,7 @@
         document.getElementById("text").innerHTML = "Welcome to The Unclosable Tab! Don't worry, it's closable for now, but if you're up for the challenge, click the button below!";
         document.getElementById("startButton").style.visibility = "visible";
       } else if (cookie == "unimportant=0") {
-        document.getElementById("text").innerHTML = "Checking to make sure you're not hacking the challenge...";
+        document.getElementById("text").innerHTML = "If you're seeing this, either your browser is REALLY slow or you haven't allowed this site to open tabs.";
         document.cookie = "unimportant=1";
         window.location.reload();
       } else if (cookie == "unimportant=1") {
