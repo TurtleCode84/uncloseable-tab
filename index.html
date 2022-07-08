@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>The Uncloseable Tab</title>
+    <script>
+      window.onbeforeunload = function(){
+        window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
+      }
+    </script>
   </head>
   <body>
     <h1>Hello, world!</h1>
   </body>
-  <script>
-    window.onbeforeunload = function(){
-      window.open("https://turtlecode84.github.io/uncloseable-tab", '_blank');
-    }
-  </script>
 </html>
